@@ -20,11 +20,33 @@ import java.util.Optional;
 
 public interface CSVRow
 {
+    /**
+     * Retourne l'identifiant de la ligne.
+     */
     CSVContext getContect();
+
+    /**
+     * Retourne le CSV ou se trouve la colonne.
+     */
     CSV getCSV();
+
+    /**
+     * Retourne toutes les colonnes de la ligne. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
+     */
     Optional<List<CSVColumn>> getColumns();
+
+    /**
+     * Retourne une colonne de la ligne grace à son identifant. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
+     */
     Optional<CSVColumn> getColumn(CSVContext csvContext);
 
+    /**
+     * Retourne une case grace à la colonne ciblé. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
+     */
     Optional<CSVCase> getCase(CSVColumn column);
+
+    /**
+     * Retourne une case grace à colonne ciblé par son identifiant. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
+     */
     Optional<CSVCase> getCase(CSVContext column);
 }

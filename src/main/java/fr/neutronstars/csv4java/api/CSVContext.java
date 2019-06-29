@@ -15,10 +15,21 @@
  */
 package fr.neutronstars.csv4java.api;
 
+/**
+ * Cette interface servira d'identifiant pour les lignes et les colonnes.
+ */
 public interface CSVContext<T>
 {
+
+    /**
+     * Retourne la valeur de l'identifiant.
+     */
     T get();
 
+
+    /**
+     * Créer un identifiant avec le paramètre en valeur et le retourne.
+     */
     static <T> CSVContext<T> of(T t){
         return () -> t;
     }

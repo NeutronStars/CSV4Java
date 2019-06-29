@@ -19,9 +19,23 @@ import java.util.Optional;
 
 public interface CSVCase
 {
+    /**
+     * Retourne la valeur de la case.
+     */
     Optional<Object> get();
 
+    /**
+     * Retourne le CSV ou se trouve la case.
+     */
     CSV getCSV();
+
+    /**
+     * Retourne la ligne ou se trouve la case.
+     */
     Optional<CSVRow> getRow();
+
+    /**
+     * Retourne la colonne ou se trouve la case.
+     */
     Optional<CSVColumn> getColumn();
 }

@@ -20,23 +20,41 @@ import java.util.Optional;
 
 public abstract class CSVParser
 {
+    /**
+     * Instance principal de la class CSVParser. Attention à bien initialiser cette variable pour pouvoir faire fonctionner l'ensemble du programme.
+     */
     private static CSVParser parser;
 
+    /**
+     * Retourne l'instance du parser. Attention celui-ci pêut être null. Par conséquent on n'utilisera l'Optional.ofNullable().
+     */
     public static Optional<CSVParser> getParser(){
         return Optional.ofNullable(parser);
     }
 
+    /**
+     * Initialise l'instance du Parser.
+     */
     public static void registerPaser(CSVParser parser){
         CSVParser.parser = parser;
     }
 
+    /**
+     * Créer un CSV grace au fichier `.csv` indiqué en paramètre.
+     */
     public Optional<CSV> parse(File file){
         return parse(file, ",");
     }
 
+    /**
+     * Créer un CSV grace au fichier `.csv` indiqué en paramètre.
+     */
     public Optional<CSV> parse(File file, String separator){
         return parse(file, separator, "\"");
     }
 
+    /**
+     * Créer un CSV grace au fichier `.csv` indiqué en paramètre.
+     */
     abstract Optional<CSV> parse(File file, String separator, String caseFormat);
 }
