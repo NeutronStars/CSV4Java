@@ -56,5 +56,5 @@ public abstract class CSVParser
     /**
      * Créer un CSV grace au fichier `.csv` indiqué en paramètre.
      */
-    abstract Optional<CSV> parse(File file, String separator, String caseFormat);
+    public abstract Optional<CSV> parse(File file, String separator, String caseFormat);
 }
