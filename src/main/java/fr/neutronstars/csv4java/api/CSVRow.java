@@ -23,7 +23,7 @@ public interface CSVRow
     /**
      * Retourne l'identifiant de la ligne.
      */
-    CSVContext getContect();
+    CSVContext getContext();
 
     /**
      * Retourne le CSV ou se trouve la colonne.
