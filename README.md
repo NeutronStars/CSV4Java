@@ -9,6 +9,6 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.NeutronStars:CSV4Java:0.0.1'
+    compile 'com.github.NeutronStars:CSV4Java:0.0.2'
 }
 ```
