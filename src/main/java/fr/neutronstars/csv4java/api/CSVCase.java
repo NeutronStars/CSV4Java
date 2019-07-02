@@ -23,6 +23,11 @@ public interface CSVCase
      * Retourne la valeur de la case.
      */
     Optional<Object> get();
+    
+    /**
+     * Change la valeur de la case.
+     */
+    void set(Object object);
 
     /**
      * Retourne le CSV ou se trouve la case.
