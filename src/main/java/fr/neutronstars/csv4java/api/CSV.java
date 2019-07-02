@@ -29,7 +29,7 @@ public interface CSV
     /**
      * Retourne la liste de toutes les colonnes.
      */
-    Optional<List<CSVColumn>> getColumns();
+    List<CSVColumn> getColumns();
 
     /**
      * Retourne une colonne grace à son identifiant. Attention, celui-ci peut retourner un null. Par conséquent on utilisera l'Optional.ofNullable().
@@ -39,7 +39,7 @@ public interface CSV
     /**
      * Retourne la liste de toutes les lignes.
      */
-    Optional<List<CSVRow>> getRows();
+    List<CSVRow> getRows();
 
     /**
      * Retourne un ligne grace à son identifiant. Attention, celui-ci peut retourner un null. Par conséquent on utilisera l'Optional.ofNullable().

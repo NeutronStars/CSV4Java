@@ -33,7 +33,7 @@ public interface CSVRow
     /**
      * Retourne toutes les colonnes de la ligne. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
      */
-    Optional<List<CSVColumn>> getColumns();
+    List<CSVColumn> getColumns();
 
     /**
      * Retourne une colonne de la ligne grace à son identifant. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
