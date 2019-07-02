@@ -95,4 +95,19 @@ public interface CSV
      * Créer une colonne après la ligne ciblé grace à son identifiant puis la retourne. Attention, celui-ci peut retourner un null. Par conséquent on utilisera l'Optional.ofNullable().
      */
     Optional<CSVRow> createNewRowAfter(CSVContext row);
+
+    /**
+     * Change la valeur d'une case avec une case cible.
+     */
+    void setCase(CSVCase csvCase, Object object);
+
+    /**
+     * Change la valeur d'une case ciblé par la colonne et la ligne.
+     */
+    void setCase(CSVColumn column, CSVRow row, Object object);
+
+    /**
+     * Change la valeur d'une case ciblé par la colonne et la ligne avec leur indentifiant.
+     */
+    void setCase(CSVContext column, CSVContext row, Object object);
 }

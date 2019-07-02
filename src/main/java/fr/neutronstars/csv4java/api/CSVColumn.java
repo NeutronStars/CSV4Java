@@ -49,4 +49,19 @@ public interface CSVColumn
      * Retourne une case grace à ligne ciblé par son identifiant. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
      */
     Optional<CSVCase> getCase(CSVContext row);
+
+    /**
+     * Change la valeur de la case avec une case ciblé.
+     */
+    void setCase(CSVCase csvCase, Object object);
+
+    /**
+     * Change la valeur d'une case ciblé par la ligne.
+     */
+    void setCase(CSVRow row, Object object);
+
+    /**
+     * Change la valeur d'une case ciblé par la ligne avec son identifiant.
+     */
+    void setCase(CSVContext row, Object object);
 }
