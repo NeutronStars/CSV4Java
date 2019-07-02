@@ -31,7 +31,7 @@ public interface CSVColumn
     CSV getCSV();
 
     /**
-     * Retourne toutes les lignes de la colonne. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
+     * Retourne toutes les lignes de la colonne.
      */
     List<CSVRow> getRows();
 
