@@ -41,6 +41,11 @@ public interface CSVColumn
     Optional<CSVRow> getRow(CSVContext csvContext);
 
     /**
+     * Retourne toutes les cases de la colonne.
+     */
+    List<CSVCase> getCases();
+
+    /**
      * Retourne une case grace à la ligne ciblé. Attention, celui-ci peut être null. Par conséquent nous utiliserons l'Optional.ofNullable()
      */
     Optional<CSVCase> getCase(CSVRow row);
